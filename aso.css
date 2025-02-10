@@ -117,18 +117,17 @@
 /* Image Box */
 .aso-image-box {
     flex-shrink: 0;
-    margin-left: 16px;
+    margin-left: auto; /* Force it to the right */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.aso-image-box {
-    flex-shrink: 0;
-    margin-left: auto; /* Force it to the right */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.aso-image-box img {
+    border-radius: 50%;
+    border: 1px solid rgba(160, 160, 160, 0.5);
+    width: 65px;
+    height: 65px;
 }
 
 /* Character Box */
