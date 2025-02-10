@@ -2,11 +2,10 @@
 
 /* General Box Styling */
 .outer-aso-box {
-    background-color: #f5f7fa;
+    background-color: var(--outer-bg-color, #f5f7fa); 
+    border: 1px solid var(--outer-border-color, rgba(160, 160, 160, 0.3));
     padding: 10px 15px;
-    margin: 20px auto;
     border-radius: 8px;
-    border: 1px solid rgba(160, 160, 160, 0.3);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
 }
 
@@ -132,14 +131,11 @@
 
 /* Character Box */
 .aso-character-box {
-    background-color: #fafafa;
-    margin-top: 8px;
+    background-color: var(--content-bg-color, #fafafa);
+    border: 1px solid var(--content-border-color, rgba(160, 160, 160, 0.3));
     padding: 12px;
-    border-radius: 0 0 8px 8px;
-    overflow: auto;
-    flex-grow: 1;
-    width: 100%;
-    box-sizing: border-box;
+    border-radius: 8px;
+    margin-top: 8px;
 }
 
 .aso-character-box sp {
