@@ -22,12 +22,13 @@
 /* Word Count Box */
 .aso-word-count-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: flex-start;
     padding: 8px 12px;
     background-color: #fafafa;
     border-radius: 8px 8px 0 0;
     gap: 10px;
+    flex-wrap: wrap; /* Add this */
 }
 
 /* Resource Section for HP, IP, and Limit Bars */
@@ -43,6 +44,7 @@
     gap: 6px;
     align-items: center;
     margin-top: 10px;
+    flex: 1;  /* Ensure it fills available space */
 }
 
 .aso-resource-bar-container {
@@ -121,11 +123,12 @@
     justify-content: center;
 }
 
-.aso-image-box img {
-    border-radius: 50%;
-    border: 1px solid rgba(160, 160, 160, 0.5);
-    width: 65px;
-    height: 65px;
+.aso-image-box {
+    flex-shrink: 0;
+    margin-left: auto; /* Force it to the right */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Character Box */
