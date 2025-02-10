@@ -4,6 +4,20 @@
     --content-bg-color: #fafafa;
     --content-border-color: #ccc;
     --content-text-color: #1f2636;
+    --outer-bg-color: #ffffff;
+    --outer-border-color: #cccccc;
+    --outer-text-color: #000000;
+    --outer-shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* New Variables for Conditions & Cooldowns */
+    --conditions-bg-color: #ffecec;
+    --conditions-border-color: #ffaaaa;
+    --conditions-text-color: #aa0000;
+
+    --cooldowns-bg-color: #e7f3ff;
+    --cooldowns-border-color: #8ab6d6;
+    --cooldowns-text-color: #004080;
+    
 }
 
 /* General Box Styling */
@@ -301,13 +315,13 @@
 
 /* Styling for Conditions and Cooldowns Box */
 .aso-conditions-box {
-    background-color: #fafafa;
-    margin-top: 10px;
+    background-color: var(--conditions-bg-color, #fafafa);
+    border: 1px solid var(--conditions-border-color, #ccc);
     padding: 10px 15px;
     border-radius: 6px;
     font-family: 'Trebuchet MS', Helvetica, sans-serif;
     font-size: 11px;
-    color: #1f2636;
+    color: var(--conditions-text-color, #1f2636);
     line-height: 1.6;
 }
 
@@ -321,19 +335,19 @@
 }
 
 .aso-conditions-entry {
-    background: linear-gradient(to right, 
-                                rgba(255, 99, 132, 0.02), /* Closer to background color at start */
-                                rgba(255, 99, 132, 0.3),  /* Stronger color in the middle */
-                                rgba(255, 99, 132, 0.02)  /* Closer to background color at end */
-                                );
+    background-color: var(--conditions-bg-color, #ffecec);
+    border: 1px solid var(--conditions-border-color, #ffaaaa);
+    color: var(--conditions-text-color, #aa0000);
+    padding: 4px 0;
+    font-weight: bold;
 }
 
 .aso-cooldowns-entry {
-    background: linear-gradient(to right, 
-                                rgba(54, 162, 235, 0.02), /* Closer to background color at start */
-                                rgba(54, 162, 235, 0.3),  /* Stronger color in the middle */
-                                rgba(54, 162, 235, 0.02)  /* Closer to background color at end */
-                                );
+    background-color: var(--cooldowns-bg-color, #e7f3ff);
+    border: 1px solid var(--cooldowns-border-color, #8ab6d6);
+    color: var(--cooldowns-text-color, #004080);
+    padding: 4px 0;
+    font-weight: bold;
 }
 
 .aso-conditions-label,
