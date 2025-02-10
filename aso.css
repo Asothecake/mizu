@@ -1,32 +1,145 @@
 /* CSS Styles for the Aso Template */
-/* Root level for fallback values */
-:root {
-    --content-bg-color: #fafafa;
-    --content-border-color: #ccc;
-    --content-text-color: #1f2636;
-}
 
 /* General Box Styling */
 .outer-aso-box {
-@@ -131,215 +137,213 @@
+    background-color: #f5f7fa;
+    padding: 10px 15px;
+    margin: 20px auto;
+    border-radius: 8px;
+    border: 1px solid rgba(160, 160, 160, 0.3);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.aso-post-container {
+    text-align: justify;
+    line-height: 1.5;
+    font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+    font-size: 12px;
+    color: #1f2636;
+    margin: 0;
+}
+
+/* Word Count Box */
+.aso-word-count-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #fafafa;
+    border-radius: 8px 8px 0 0;
+    gap: 10px;
+    flex-wrap: nowrap;  /* Prevent items from wrapping */
+}
+
+/* Resource Section for HP, IP, and Limit Bars */
+.aso-resource-section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;  /* Force it to take available space */
+}
+
+.aso-resource-bar-group {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-top: 10px;
+    flex: 1;  /* Ensure it fills available space */
+}
+
+.aso-resource-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    flex: 1;
+}
+
+.aso-resource-bar-container img {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+/* HP Bar Styling */
+.aso-hp-bar-container {
+    position: relative;
+    height: 8px;
+    background-color: rgba(105, 105, 105, 0.1);
+    border: 1px solid rgba(105, 105, 105, 0.5);
+    border-radius: 5px;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.aso-hp-bar-fill {
+    height: 100%;
+    background-color: #e74c3c; /* Red for HP */
+    transition: width 0.3s ease;
+}
+
+/* IP and Limit Bar Styling */
+.aso-resource-bar-wrapper,
+.aso-limit-bar-wrapper {
+    display: flex;
+    height: 8px;
+    background-color: rgba(105, 105, 105, 0.1);
+    border: 1px solid rgba(105, 105, 105, 0.5);
+    border-radius: 4px;
+    overflow: hidden;
+    gap: 1px;
+    flex-grow: 1;
+}
+
+.aso-resource-unit {
+    flex-grow: 1;
+    transition: background-color 0.3s ease;
+}
+
+/* Updated Specific Colors for Each Resource Bar */
+
+/* IP Bar - Green */
+.aso-resource-bar-wrapper .aso-resource-unit {
+    background-color: #66bb6a; /* Green for IP */
+}
+
+/* Limit Bar - Blue */
+.aso-limit-bar-wrapper .aso-resource-unit {
+    background-color: #42a5f5; /* Blue for Limit */
+}
+
+/* Unfilled Units */
+.aso-resource-unit.unfilled {
+    background-color: rgba(105, 105, 105, 0.1);
+}
+
+/* Image Box */
+.aso-image-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;  /* Force push to the right */
+    flex-shrink: 0;     /* Prevent shrinking */
+}
+
+.aso-image-box img {
+    border-radius: 50%;
+    border: 1px solid rgba(160, 160, 160, 0.5);
+    width: 65px;
+    height: 65px;
+    object-fit: cover;  /* Ensure the image maintains its shape */
 }
 
 /* Character Box */
-/* Apply custom colors dynamically */
 .aso-character-box {
-    background-color: var(--content-bg-color, #fafafa);
-    border: 1px solid var(--content-border-color, rgba(160, 160, 160, 0.5));
-    border: 1px solid var(--content-border-color, #ccc);
-    color: var(--content-text-color, #1f2636);
+    background-color: #fafafa;
     margin-top: 8px;
     padding: 12px;
     border-radius: 0 0 8px 8px;
     overflow: auto;
     flex-grow: 1;
     width: 100%;
-    border-radius: 8px;
     box-sizing: border-box;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .aso-character-box sp {
