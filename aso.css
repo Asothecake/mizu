@@ -2,11 +2,12 @@
 
 /* General Box Styling */
 .outer-aso-box {
-    background-color: var(--outer-bg-color, #f5f7fa); 
+    background-color: var(--outer-bg-color, #f5f7fa);
     border: 1px solid var(--outer-border-color, rgba(160, 160, 160, 0.3));
+    color: var(--text-color, #1f2636);
+    box-shadow: 0px 4px 10px var(--shadow-color, rgba(0, 0, 0, 0.08));
     padding: 10px 15px;
     border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .aso-post-container {
@@ -133,6 +134,7 @@
 .aso-character-box {
     background-color: var(--content-bg-color, #fafafa);
     border: 1px solid var(--content-border-color, rgba(160, 160, 160, 0.3));
+    color: var(--content-text-color, #1f2636);
     padding: 12px;
     border-radius: 8px;
     margin-top: 8px;
