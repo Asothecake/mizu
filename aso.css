@@ -22,19 +22,20 @@
 /* Word Count Box */
 .aso-word-count-box {
     display: flex;
-    justify-content: space-between; 
-    align-items: center; /* Keep items vertically aligned */
+    justify-content: space-between;
+    align-items: center;
     padding: 8px 12px;
     background-color: #fafafa;
     border-radius: 8px 8px 0 0;
     gap: 10px;
+    flex-wrap: nowrap;  /* Prevent items from wrapping */
 }
 
 /* Resource Section for HP, IP, and Limit Bars */
 .aso-resource-section {
     display: flex;
     flex-direction: column;
-    flex: 1; /* Fills the remaining space */
+    flex-grow: 1;  /* Force it to take available space */
 }
 
 .aso-resource-bar-group {
@@ -114,11 +115,11 @@
 
 /* Image Box */
 .aso-image-box {
-    flex-shrink: 0;
-    margin-left: auto;  /* Pushes the image to the far right */
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: auto;  /* Force push to the right */
+    flex-shrink: 0;     /* Prevent shrinking */
 }
 
 .aso-image-box img {
@@ -126,6 +127,7 @@
     border: 1px solid rgba(160, 160, 160, 0.5);
     width: 65px;
     height: 65px;
+    object-fit: cover;  /* Ensure the image maintains its shape */
 }
 
 /* Character Box */
