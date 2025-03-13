@@ -1,43 +1,44 @@
 // JavaScript for toggling visibility of sections (Stats, Commands, Style)
-function toggleVisibility(element, className) {
+function togglePostContent(element) {
     // Find the closest container element that contains all relevant parts
-    const container = element.closest('.mizu-post-container');
-    
-    // Find the relevant section within the container and toggle its visibility
-    const section = container.querySelector(`.${className}`);
-    section.classList.toggle('mizu-content-hidden');
-    section.classList.toggle('mizu-content-visible');
+    const postContainer = element.closest('.mizu-post-container');
+    if (!postContainer) return;
+
+    const targetClass = element.getAttribute('data-target'); // Get the correct target
+    const section = postContainer.querySelector(`.${targetClass}`);
+
+    if (section) {
+        section.classList.toggle('mizu-content-hidden');
+        section.classList.toggle('mizu-content-visible');
+    }
 }
 
 // JavaScript for updating the resource bar fill percentage dynamically
 document.addEventListener("DOMContentLoaded", () => {
-    // Update HP bar
+    // Update HP bars
     document.querySelectorAll(".mizu-hp-bar-container").forEach(container => {
         const current = parseInt(container.getAttribute("data-current"), 10);
         const max = parseInt(container.getAttribute("data-max"), 10);
         const fill = document.createElement('div');
         fill.classList.add('mizu-hp-bar-fill');
-        const widthPercent = (current / max) * 100;
-        fill.style.width = widthPercent + "%";
+        fill.style.width = `${(current / max) * 100}%`;
         container.appendChild(fill);
     });
 
-    // Update IP bar
+    // Update IP bars
     document.querySelectorAll(".mizu-resource-bar-wrapper").forEach(wrapper => {
         const current = parseInt(wrapper.getAttribute("data-current"), 10);
         const max = parseInt(wrapper.getAttribute("data-max"), 10);
         wrapper.innerHTML = ""; // Clear existing units
 
-        // Loop to create units for the resource bar
+        // Loop to create filled/unfilled units for the resource bar
         for (let i = 0; i < max; i++) {
             const unit = document.createElement('div');
             unit.classList.add('mizu-resource-unit');
             if (i >= current) {
-                unit.classList.add('unfilled');
+                unit.classList.add('unfilled'); // Mark as unfilled
             }
             wrapper.appendChild(unit);
         }
     });
 });
-
-
