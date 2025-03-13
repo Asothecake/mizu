@@ -1,18 +1,13 @@
 // JavaScript for toggling visibility of sections (Stats, Commands, Style)
-function togglePostContent(element) {
+function toggleVisibility(element, className) {
     // Find the closest container element that contains all relevant parts
-    const postContainer = element.closest('.mizu-post-container');
-    if (!postContainer) return;
-
-    const targetClass = element.getAttribute('data-target'); // Get the correct target
-    const section = postContainer.querySelector(`.${targetClass}`);
-
-    if (section) {
-        section.classList.toggle('mizu-content-hidden');
-        section.classList.toggle('mizu-content-visible');
-    }
+    const container = element.closest('.mizu-post-container');
+    
+    // Find the relevant section within the container and toggle its visibility
+    const section = container.querySelector(`.${className}`);
+    section.classList.toggle('mizu-content-hidden');
+    section.classList.toggle('mizu-content-visible');
 }
-
 // JavaScript for updating the resource bar fill percentage dynamically
 document.addEventListener("DOMContentLoaded", () => {
     // Update HP bars
