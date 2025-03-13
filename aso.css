@@ -1,8 +1,9 @@
-/* CSS Styles for the Aso Template */
+/* CSS Styles for the mizu Template */
 
 /* General Box Styling */
-.outer-aso-box {
+.outer-mizu-box {
     background-color: #f5f7fa;
+
     padding: 10px 15px;
     margin: 20px auto;
     border-radius: 8px;
@@ -10,7 +11,7 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-.aso-post-container {
+.mizu-post-container {
     text-align: justify;
     line-height: 1.5;
     font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
@@ -20,7 +21,7 @@
 }
 
 /* Word Count Box */
-.aso-word-count-box {
+.mizu-word-count-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,13 +33,13 @@
 }
 
 /* Resource Section for HP, IP, and Limit Bars */
-.aso-resource-section {
+.mizu-resource-section {
     display: flex;
     flex-direction: column;
     flex-grow: 1;  /* Force it to take available space */
 }
 
-.aso-resource-bar-group {
+.mizu-resource-bar-group {
     display: flex;
     gap: 6px;
     align-items: center;
@@ -46,7 +47,7 @@
     flex: 1;  /* Ensure it fills available space */
 }
 
-.aso-resource-bar-container {
+.mizu-resource-bar-container {
     display: flex;
     align-items: center;
     gap: 4px;
@@ -54,7 +55,7 @@
     flex: 1;
 }
 
-.aso-resource-bar-container img {
+.mizu-resource-bar-container img {
     width: 20px;
     height: 20px;
     margin-right: 4px;
@@ -62,7 +63,7 @@
 }
 
 /* HP Bar Styling */
-.aso-hp-bar-container {
+.mizu-hp-bar-container {
     position: relative;
     height: 8px;
     background-color: rgba(105, 105, 105, 0.1);
@@ -72,15 +73,15 @@
     flex-grow: 1;
 }
 
-.aso-hp-bar-fill {
+.mizu-hp-bar-fill {
     height: 100%;
     background-color: #e74c3c; /* Red for HP */
     transition: width 0.3s ease;
 }
 
 /* IP and Limit Bar Styling */
-.aso-resource-bar-wrapper,
-.aso-limit-bar-wrapper {
+.mizu-resource-bar-wrapper,
+.mizu-limit-bar-wrapper {
     display: flex;
     height: 8px;
     background-color: rgba(105, 105, 105, 0.1);
@@ -91,7 +92,7 @@
     flex-grow: 1;
 }
 
-.aso-resource-unit {
+.mizu-resource-unit {
     flex-grow: 1;
     transition: background-color 0.3s ease;
 }
@@ -99,22 +100,22 @@
 /* Updated Specific Colors for Each Resource Bar */
 
 /* IP Bar - Green */
-.aso-resource-bar-wrapper .aso-resource-unit {
+.mizu-resource-bar-wrapper .mizu-resource-unit {
     background-color: #66bb6a; /* Green for IP */
 }
 
 /* Limit Bar - Blue */
-.aso-limit-bar-wrapper .aso-resource-unit {
+.mizu-limit-bar-wrapper .mizu-resource-unit {
     background-color: #42a5f5; /* Blue for Limit */
 }
 
 /* Unfilled Units */
-.aso-resource-unit.unfilled {
+.mizu-resource-unit.unfilled {
     background-color: rgba(105, 105, 105, 0.1);
 }
 
 /* Image Box */
-.aso-image-box {
+.mizu-image-box {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -122,7 +123,7 @@
     flex-shrink: 0;     /* Prevent shrinking */
 }
 
-.aso-image-box img {
+.mizu-image-box img {
     border-radius: 50%;
     border: 1px solid rgba(160, 160, 160, 0.5);
     width: 65px;
@@ -131,7 +132,7 @@
 }
 
 /* Character Box */
-.aso-character-box {
+.mizu-character-box {
     background-color: #fafafa;
     margin-top: 8px;
     padding: 12px;
@@ -142,31 +143,31 @@
     box-sizing: border-box;
 }
 
-.aso-character-box sp {
+.mizu-character-box sp {
     color: #697ecd;
     font-style: italic;
     font-weight: bold;
 }
 
-.aso-character-box fp {
+.mizu-character-box fp {
     color: #5F9EA0;
     font-style: italic;
     font-weight: bold;
 }
 
-.aso-character-box kp {
+.mizu-character-box kp {
     color: #704342;
     font-style: italic;
     font-weight: bold;
 }
 
-.aso-character-box kp {
+.mizu-character-box kp {
     color: #704342;
     font-style: italic;
     font-weight: bold;
 }
 
-.aso-character-box mzp {
+.mizu-character-box mzp {
     color: #00BFFF;
     font-style: normal;
     font-weight: bold;
@@ -174,7 +175,7 @@
 
 
 /* Words Line Toggle (Stats, Commands, Style) */
-.aso-words-line {
+.mizu-words-line {
     display: flex;
     justify-content: space-between;
     gap: 8px;
@@ -182,7 +183,7 @@
     width: 100%;
 }
 
-.aso-words-line span {
+.mizu-words-line span {
     font-weight: bold;
     text-transform: uppercase;
     color: #697ecd;
@@ -191,17 +192,17 @@
 }
 
 /* Hidden and Visible Content */
-.aso-content-hidden {
+.mizu-content-hidden {
     display: none;
     font-size: 11px;
 }
 
-.aso-content-visible {
+.mizu-content-visible {
     display: block;
 }
 
 /* Stat Bars with Fade Effect and Individual Colors */
-.aso-stat-entry {
+.mizu-stat-entry {
     display: flex;
     align-items: center;
     margin: 6px 0;
@@ -215,23 +216,23 @@
     border-radius: 0;
 }
 
-.aso-stat-strength {
+.mizu-stat-strength {
     background: linear-gradient(to left, rgba(255, 99, 132, 0), rgba(255, 99, 132, 0.2), rgba(255, 99, 132, 0));
 }
 
-.aso-stat-defense {
+.mizu-stat-defense {
     background: linear-gradient(to left, rgba(75, 192, 192, 0), rgba(75, 192, 192, 0.2), rgba(75, 192, 192, 0));
 }
 
-.aso-stat-agility {
+.mizu-stat-agility {
     background: linear-gradient(to left, rgba(255, 205, 86, 0), rgba(255, 205, 86, 0.2), rgba(255, 205, 86, 0));
 }
 
-.aso-stat-magic {
+.mizu-stat-magic {
     background: linear-gradient(to left, rgba(54, 162, 235, 0), rgba(54, 162, 235, 0.2), rgba(54, 162, 235, 0));
 }
 
-.aso-stat-name {
+.mizu-stat-name {
     flex: 1;
     text-align: right;
     font-family: 'Verdana', Geneva, sans-serif;
@@ -241,12 +242,12 @@
     margin-right: 10px;
 }
 
-.aso-stat-die {
+.mizu-stat-die {
     opacity: 0.7;
     margin-right: 3px;
 }
 
-.aso-stat-value-box {
+.mizu-stat-value-box {
     font-weight: bold;
     font-size: 14px;
     color: #697ecd;
@@ -254,7 +255,7 @@
 }
 
 /* Command Entries */
-.aso-command-entry {
+.mizu-command-entry {
     margin: 3px 0;
     padding: 4px 0;
     font-weight: bold;
@@ -267,16 +268,16 @@
     border-radius: 0;
 }
 
-.aso-command-entry:nth-child(odd) {
+.mizu-command-entry:nth-child(odd) {
     background: linear-gradient(to left, rgba(255, 159, 64, 0), rgba(255, 159, 64, 0.2), rgba(255, 159, 64, 0));
 }
 
-.aso-command-entry:nth-child(even) {
+.mizu-command-entry:nth-child(even) {
     background: linear-gradient(to left, rgba(153, 102, 255, 0), rgba(153, 102, 255, 0.2), rgba(153, 102, 255, 0));
 }
 
 /* Styling for the Style container */
-.aso-style-content {
+.mizu-style-content {
     padding: 10px;
     margin-top: 8px;
     font-size: 12px;
@@ -287,14 +288,14 @@
     border-radius: 4px;
 }
 
-.aso-style-content p {
+.mizu-style-content p {
     margin-bottom: 8px;
     border-bottom: 1px solid rgba(160, 160, 160, 0.2);
     padding-bottom: 4px;
 }
 
 /* Styling for Conditions and Cooldowns Box */
-.aso-conditions-box {
+.mizu-conditions-box {
     background-color: #fafafa;
     margin-top: 10px;
     padding: 10px 15px;
@@ -305,8 +306,8 @@
     line-height: 1.6;
 }
 
-.aso-conditions-entry,
-.aso-cooldowns-entry {
+.mizu-conditions-entry,
+.mizu-cooldowns-entry {
     display: flex;
     justify-content: space-between;
     padding: 4px 0;
@@ -314,7 +315,7 @@
     letter-spacing: 1px;
 }
 
-.aso-conditions-entry {
+.mizu-conditions-entry {
     background: linear-gradient(to right, 
                                 rgba(255, 99, 132, 0.02), /* Closer to background color at start */
                                 rgba(255, 99, 132, 0.3),  /* Stronger color in the middle */
@@ -322,7 +323,7 @@
                                 );
 }
 
-.aso-cooldowns-entry {
+.mizu-cooldowns-entry {
     background: linear-gradient(to right, 
                                 rgba(54, 162, 235, 0.02), /* Closer to background color at start */
                                 rgba(54, 162, 235, 0.3),  /* Stronger color in the middle */
@@ -330,14 +331,17 @@
                                 );
 }
 
-.aso-conditions-label,
-.aso-cooldowns-label {
+.mizu-conditions-label,
+.mizu-cooldowns-label {
     opacity: 0.25;
     text-transform: uppercase;
     font-size: 12px;
     color: #1f2636;
 }
 
-.aso-entry-value {
+.mizu-entry-value {
     text-align: right;
 }
+
+
+
